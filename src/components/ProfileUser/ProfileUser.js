@@ -28,7 +28,7 @@ class ProfileUser extends Component {
           style={{width: 200, height: 200, borderRadius: 100}}
           source={{uri: 'https://www.members.eyp.org/system/files/default_images/default-avatar_7.png'}}/>
         
-        <Text style={{color: '#EE5F46', marginBottom: 20, marginTop: 20, textAlign: 'center'}}>Kip Dynamite</Text>
+        <Text style={styles.displayName}>Kip Dynamite</Text>
 
         <TextInput
           style={styles.textInput}
@@ -55,9 +55,9 @@ class ProfileUser extends Component {
           value={this.state.bio}/>
 
         <Button 
+          style={styles.updateButton}
           onPress={this.updateProfile}
-          title="Update Profile"
-          color="#EE5F46"/>
+          title="Update Profile"/>
       </View>  
     );
   }
@@ -76,14 +76,30 @@ const styles = StyleSheet.create({
     width: '100%', 
     backgroundColor: 'rgba(0,0,0,.93)'
   },
+  displayName: {
+    color: 'rgb(247,247,247)',
+    fontSize: 20, 
+    fontWeight: '500',
+    marginBottom: 20, 
+    marginTop: 20, 
+    textAlign: 'center'
+  },
   textInput: {
     height: 40, 
     width: 250, 
     borderColor: 'gray', 
     borderWidth: 1,
+    borderRadius: 5,
+    paddingLeft: 10,
     backgroundColor: '#fff',
     marginBottom: 10
   },
+  updateButton: {
+    borderColor: '#fff',
+    borderWidth: 1,
+    borderRadius: 5,
+    color: "#EE5F46"
+  }
 });
 
 // <h3 style={{color: "#F7F7F7"}}>"Kip Dynamite"</h3>          
